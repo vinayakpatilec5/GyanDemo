@@ -12,6 +12,8 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
     AppBarLayout appBarLayout;
+    boolean appBarVisible = true;
+    NestedScrollView scrollView;
 
 
     @Override
@@ -39,26 +41,30 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void hideAppBarOnScroll(){
-        NestedScrollView scrollView = (NestedScrollView) findViewById(R.id.scrollView);
+        scrollView = (NestedScrollView) findViewById(R.id.scrollView);
         scrollView.setOnScrollChangeListener(new NestedScrollView.OnScrollChangeListener() {
             @Override
             public void onScrollChange(NestedScrollView nestedScrollView, int i, int i1, int i2, int i3) {
                 float scroll = nestedScrollView.getScrollY();
-                if(scroll>600){
-                    setAppBarLayoutHeight(0);
+                if(scroll>1000){
+                    setAppBarPosition(false);
                 }else {
-                    setAppBarLayoutHeight(AppBarLayout.LayoutParams.WRAP_CONTENT);
+                    setAppBarPosition(true);
                 }
             }
         });
     }
 
-    private void setAppBarLayoutHeight(int height){
-        CoordinatorLayout.LayoutParams lp = (CoordinatorLayout.LayoutParams)appBarLayout.getLayoutParams();
+    private void setAppBarPosition(boolean showAppbar){
         int  h1 = appBarLayout.getHeight();
-        if(((appBarLayout.getHeight() > 0)&&(height==0))||((appBarLayout.getHeight()==0)&&(height == AppBarLayout.LayoutParams.WRAP_CONTENT))){
-            lp.height = height;
-            appBarLayout.setLayoutParams(lp);
+        if(appBarVisible&&(!showAppbar)){
+            appBarVisible = false;
+            appBarLayout.animate().translationY(-h1).setDuration(400);
+            scrollView.animate().translationY(-h1).setDuration(400);
+        }else if((!appBarVisible)&&showAppbar) {
+            appBarLayout.animate().translationY(0).setDuration(400);
+            scrollView.animate().translationY(0).setDuration(400);
+            appBarVisible = true;
         }
     }
 

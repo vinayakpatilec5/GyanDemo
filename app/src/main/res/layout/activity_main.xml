@@ -5,6 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/background"
     tools:context=".MainActivity">
 
     <android.support.design.widget.AppBarLayout
@@ -19,7 +20,6 @@
             android:layout_height="match_parent"
             android:fitsSystemWindows="true"
             app:contentScrim="@color/colorAccent"
-            android:accessibilityPaneTitle="jfshkfdhs"
             app:layout_scrollFlags="scroll|exitUntilCollapsed">
             <LinearLayout
                 android:layout_width="match_parent"
@@ -28,33 +28,27 @@
                 app:layout_collapseMode="parallax"
                 android:background="@color/colorAccent"
                 app:layout_collapseParallaxMultiplier="0.6"
-                android:weightSum="1"
                 android:gravity="center_vertical">
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
                     android:layout_gravity="bottom"
-                    android:layout_marginLeft="40dp"
-                    android:layout_weight="0.98">
+                    android:layout_marginLeft="56dp">
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="10dp"
                         android:textSize="18sp"
                         android:maxLines="1"
-                        android:ellipsize="end"
                         android:textStyle="bold"
                         android:textColor="@color/gray"
                         android:text="You are welcome Vinayak"/>
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="10dp"
                         android:paddingBottom="5dp"
                         android:textSize="16sp"
                         android:maxLines="1"
-                        android:ellipsize="end"
                         android:textColor="@color/gray"
                         android:text="These are your feeds"/>
                 </LinearLayout>
@@ -73,11 +67,10 @@
                     android:weightSum="1"
                     android:gravity="center_vertical">
                     <TextView
-                        android:id="@+id/tv_wc_user"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.98"
-                        android:layout_marginLeft="35dp"
+                        android:layout_marginLeft="40dp"
                         android:textSize="18sp"
                         android:maxLines="1"
                         android:ellipsize="end"
@@ -101,13 +94,13 @@
                 </LinearLayout>
             </android.support.v7.widget.Toolbar>
             <ImageView
-                android:layout_width="30dp"
+                android:layout_width="45dp"
                 android:layout_height="?attr/actionBarSize"
-                android:padding="4dp"
+                android:padding="3dp"
                 android:layout_gravity="bottom"
                 android:layout_marginLeft="5dp"
                 android:onClick="openDrawer"
-                android:src="@drawable/ic_drawer"/>
+                android:src="@drawable/ic_profile_darkgray"/>
 
         </android.support.design.widget.CollapsingToolbarLayout>
 
@@ -116,34 +109,274 @@
     <android.support.v4.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_marginBottom="-80dp"
         android:background="@color/background"
         android:id="@+id/scrollView"
         app:layout_behavior="@string/appbar_scrolling_view_behavior">
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="16dp"
-            android:orientation="vertical">
-            <TextView
-                android:layout_width="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="10dp">
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="22sp"
+                android:orientation="vertical"
+                android:background="@color/colorAccent"
+                android:padding="10dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp"
+                    android:layout_marginTop="10dp"
+                    android:maxLines="1"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/black"
+                    android:text="This is first feed"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:textSize="14sp"
+                    android:textColor="@android:color/black"
+                    android:text="Google News is a news aggregator and app developed by Google. It presents a continuous, customizable flow of articles organized from thousands of publishers and magazines. Google News is available on Android, iOS, and the web. Google News is available on Android, iOS, and the web. A beta version was launched in September 2002."
+                    android:lineSpacingExtra="5dp"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
                 android:layout_marginTop="10dp"
-                android:maxLines="1"
-                android:ellipsize="end"
-                android:textStyle="bold"
-                android:textColor="@android:color/black"
-                android:text="This is first feed"/>
-            <TextView
-                android:layout_width="wrap_content"
+                android:background="@color/colorAccent"
+                android:padding="10dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp"
+                    android:layout_marginTop="10dp"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/black"
+                    android:text="This is first feed"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:textSize="14sp"
+                    android:textColor="@android:color/black"
+                    android:text="Google News is a news aggregator and app developed by Google. It presents a continuous, customizable flow of articles organized from thousands of publishers and magazines. Google News is available on Android, iOS, and the web. Google News is available on Android, iOS, and the web. A beta version was launched in September 2002."
+                    android:lineSpacingExtra="5dp"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="12dp"
-                android:textSize="14sp"
-                android:lineSpacingExtra="5dp"
-                android:ellipsize="end"
-                android:textColor="@android:color/black"
-                android:text="Google News is a news aggregator and app developed by Google. It presents a continuous, customizable flow of articles organized from thousands of publishers and magazines. Google News is available on Android, iOS, and the web. A beta version was launched in September 2002, and released officially in January 2006.\n\nGoogle News is a news aggregator and app developed by Google. It presents a continuous, customizable flow of articles organized from thousands of publishers and magazines. Google News is available on Android, iOS, and the web. A beta version was launched in September 2002, and released officially in January 2006.\n\nGoogle News is a news aggregator and app developed by Google. It presents a continuous, customizable flow of articles organized from thousands of publishers and magazines. Google News is available on Android, iOS, and the web. A beta version was launched in September 2002, and released officially in January 2006.\n\nGoogle News is a news aggregator and app developed by Google. It presents a continuous, customizable flow of articles organized from thousands of publishers and magazines. Google News is available on Android, iOS, and the web. A beta version was launched in September 2002, and released officially in January 2006.\n\nGoogle News is a news aggregator and app developed by Google. It presents a continuous, customizable flow of articles organized from thousands of publishers and magazines. Google News is available on Android, iOS, and the web. A beta version was launched in September 2002, and released officially in January 2006.\n\nGoogle News is a news aggregator and app developed by Google. It presents a continuous, customizable flow of articles organized from thousands of publishers and magazines. Google News is available on Android, iOS, and the web. A beta version was launched in September 2002, and released officially in January 2006."/>
+                android:orientation="vertical"
+                android:layout_marginTop="10dp"
+                android:background="@color/colorAccent"
+                android:padding="10dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp"
+                    android:layout_marginTop="10dp"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/black"
+                    android:text="This is first feed"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:textSize="14sp"
+                    android:textColor="@android:color/black"
+                    android:text="Google News is a news aggregator and app developed by Google. It presents a continuous, customizable flow of articles organized from thousands of publishers and magazines. Google News is available on Android, iOS, and the web. Google News is available on Android, iOS, and the web. A beta version was launched in September 2002."
+                    android:lineSpacingExtra="5dp"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="10dp"
+                android:background="@color/colorAccent"
+                android:padding="10dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp"
+                    android:layout_marginTop="10dp"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/black"
+                    android:text="This is first feed"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:textSize="14sp"
+                    android:textColor="@android:color/black"
+                    android:text="Google News is a news aggregator and app developed by Google. It presents a continuous, customizable flow of articles organized from thousands of publishers and magazines. Google News is available on Android, iOS, and the web. Google News is available on Android, iOS, and the web. A beta version was launched in September 2002."
+                    android:lineSpacingExtra="5dp"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="10dp"
+                android:background="@color/colorAccent"
+                android:padding="10dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp"
+                    android:layout_marginTop="10dp"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/black"
+                    android:text="This is first feed"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:textSize="14sp"
+                    android:textColor="@android:color/black"
+                    android:text="Google News is a news aggregator and app developed by Google. It presents a continuous, customizable flow of articles organized from thousands of publishers and magazines. Google News is available on Android, iOS, and the web. Google News is available on Android, iOS, and the web. A beta version was launched in September 2002."
+                    android:lineSpacingExtra="5dp"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="10dp"
+                android:background="@color/colorAccent"
+                android:padding="10dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp"
+                    android:layout_marginTop="10dp"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/black"
+                    android:text="This is first feed"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:textSize="14sp"
+                    android:textColor="@android:color/black"
+                    android:text="Google News is a news aggregator and app developed by Google. It presents a continuous, customizable flow of articles organized from thousands of publishers and magazines. Google News is available on Android, iOS, and the web. Google News is available on Android, iOS, and the web. A beta version was launched in September 2002."
+                    android:lineSpacingExtra="5dp"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="10dp"
+                android:background="@color/colorAccent"
+                android:padding="10dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp"
+                    android:layout_marginTop="10dp"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/black"
+                    android:text="This is first feed"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:textSize="14sp"
+                    android:textColor="@android:color/black"
+                    android:text="Google News is a news aggregator and app developed by Google. It presents a continuous, customizable flow of articles organized from thousands of publishers and magazines. Google News is available on Android, iOS, and the web. Google News is available on Android, iOS, and the web. A beta version was launched in September 2002."
+                    android:lineSpacingExtra="5dp"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="10dp"
+                android:background="@color/colorAccent"
+                android:padding="10dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp"
+                    android:layout_marginTop="10dp"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/black"
+                    android:text="This is first feed"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:textSize="14sp"
+                    android:textColor="@android:color/black"
+                    android:text="Google News is a news aggregator and app developed by Google. It presents a continuous, customizable flow of articles organized from thousands of publishers and magazines. Google News is available on Android, iOS, and the web. Google News is available on Android, iOS, and the web. A beta version was launched in September 2002."
+                    android:lineSpacingExtra="5dp"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="10dp"
+                android:background="@color/colorAccent"
+                android:padding="10dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp"
+                    android:layout_marginTop="10dp"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/black"
+                    android:text="This is first feed"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:textSize="14sp"
+                    android:textColor="@android:color/black"
+                    android:text="Google News is a news aggregator and app developed by Google. It presents a continuous, customizable flow of articles organized from thousands of publishers and magazines. Google News is available on Android, iOS, and the web. Google News is available on Android, iOS, and the web. A beta version was launched in September 2002."
+                    android:lineSpacingExtra="5dp"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="10dp"
+                android:background="@color/colorAccent"
+                android:padding="10dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp"
+                    android:layout_marginTop="10dp"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/black"
+                    android:text="This is first feed"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:textSize="14sp"
+                    android:textColor="@android:color/black"
+                    android:text="Google News is a news aggregator and app developed by Google. It presents a continuous, customizable flow of articles organized from thousands of publishers and magazines. Google News is available on Android, iOS, and the web. Google News is available on Android, iOS, and the web. A beta version was launched in September 2002."
+                    android:lineSpacingExtra="5dp"/>
+            </LinearLayout>
+
         </LinearLayout>
 
 
